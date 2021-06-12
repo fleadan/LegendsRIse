@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="edu.itesm.tournamentHelp.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_mainFragment_to_tournamentFrag"
+            app:destination="@id/tournamentFrag"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_mainFragment_to_tourneysActivity"
+            app:destination="@id/tourneysActivity" />
+        <action
+            android:id="@+id/action_mainFragment_to_newTfragment"
+            app:destination="@id/newTfragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_myTeams"
+            app:destination="@id/myTeams" />
+        <action
+            android:id="@+id/action_mainFragment_to_createTeamFragment"
+            app:destination="@id/createTeamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="edu.itesm.tournamentHelp.CarritoFragment"
+        android:label="fragment_carrito"
+        tools:layout="@layout/fragment_carrito" >
+        <action
+            android:id="@+id/action_carritoFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="edu.itesm.tournamentHelp.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_createTeamFragment"
+            app:destination="@id/createTeamFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/tournamentFrag"
+        android:name="edu.itesm.tournamentHelp.TournamentFrag"
+        android:label="fragment_tournament"
+        tools:layout="@layout/fragment_tournament" >
+        <action
+            android:id="@+id/action_tournamentFrag_to_newTfragment"
+            app:destination="@id/newTfragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_tournamentFrag_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTfragment"
+        android:name="edu.itesm.tournamentHelp.NewTfragment"
+        android:label="fragment_new_tfragment"
+        tools:layout="@layout/fragment_new_tfragment" >
+        <action
+            android:id="@+id/action_newTfragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTeamFragment"
+        android:name="edu.itesm.tournamentHelp.CreateTeamFragment"
+        android:label="fragment_create_team"
+        tools:layout="@layout/fragment_create_team" >
+        <action
+            android:id="@+id/action_createTeamFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_createTeamFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <activity
+        android:id="@+id/tourneysActivity"
+        android:name="edu.itesm.tournamentHelp.TourneysActivity"
+        android:label="activity_tourneys"
+        tools:layout="@layout/activity_tourneys">
+    </activity>
+    <activity
+        android:id="@+id/myTeams"
+        android:name="edu.itesm.tournamentHelp.myTeams"
+        android:label="activity_my_teams"
+        tools:layout="@layout/activity_my_teams" />
+
+
+</navigation>

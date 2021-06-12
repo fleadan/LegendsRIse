@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MarvelApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="TeamsArray">
+        <item>Pick your team!</item>
+        <item>TSM</item>
+        <item>G2</item>
+        <item>SKT</item>
+        <item>Team Liquid</item>
+        <item>Cloud9</item>
+        <item>Heretics</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
